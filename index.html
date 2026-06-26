@@ -1,13 +1,28 @@
-<!doctype html><html><head><meta charset="utf-8"><title>BiV fiber viewer</title>
-<style>body{font:16px sans-serif;max-width:680px;margin:50px auto;padding:0 20px;color:#222}
-a{display:block;padding:14px 18px;margin:12px 0;background:#f0f3f7;border:1px solid #ccd;
-border-radius:8px;text-decoration:none;color:#1f4e79;font-weight:600}a:hover{background:#e3ebf5}
-img{width:100%;border-radius:8px;background:#0d0d12;margin:12px 0}figcaption{color:#666;font-size:13px}</style>
-</head><body><h1>BiV myocardial fibers &mdash; interactive</h1>
-<p>Rule-based Holzapfel-Ogden fibers at end-diastole. Drag to rotate, scroll to zoom.</p>
-<a href="fibers_stretch.html">Fiber stretch &lambda;f &rarr;</a>
-<a href="fibers_stress.html">Fiber stress &sigma;f &rarr;</a>
-<figure><img src="engagement.gif" alt="fiber engagement animation">
-<figcaption>Engagement under inflation: wall + fibers deform together; fibers sweep blue&rarr;red
-(slack&rarr;stretched) as they cross &lambda;f = 1 with rising end-diastolic pressure.</figcaption></figure>
-</body></html>
+<!doctype html><html><head><meta charset="utf-8"><title>BiV fibers &amp; mechanics — gallery</title>
+<style>body{font:15px/1.4 sans-serif;margin:0;background:#14151a;color:#e8e8ec}
+header{padding:28px 32px 8px}h1{margin:0;font-size:24px}p.sub{color:#9aa;margin:6px 0 0}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:18px;padding:24px 32px}
+figure{margin:0;background:#1e2027;border:1px solid #2c2f3a;border-radius:10px;overflow:hidden}
+figure img{width:100%;display:block;background:#0d0d12;aspect-ratio:1/1;object-fit:contain}
+figcaption{padding:10px 14px;font-size:13px;color:#c7c9d1}figcaption b{color:#fff}
+a{text-decoration:none}</style></head>
+<body><header><h1>BiV myocardial fibers &amp; passive mechanics</h1>
+<p class="sub">Click any panel for the full figure; the top two open the interactive 3D viewers.</p>
+</header><div class="grid">
+  <figure><a href="https://nmanthatis.github.io/biv-fiber-viewer/fibers_stretch.html" target="_blank" rel="noopener"><img src="thumb/00_fiber_stretch.png" loading="lazy"></a>
+    <figcaption><b>Fiber stretch (interactive)</b><br>Streamline fibers colored by stretch &lambda;f at end-diastole. Click to open the rotatable 3D viewer.</figcaption></figure>
+  <figure><a href="https://nmanthatis.github.io/biv-fiber-viewer/fibers_stress.html" target="_blank" rel="noopener"><img src="thumb/01_fiber_stress.png" loading="lazy"></a>
+    <figcaption><b>Fiber stress (interactive)</b><br>Streamline fibers colored by the load they carry, &sigma;f. Click for the 3D viewer.</figcaption></figure>
+  <figure><a href="full/02_engagement_animation.gif"><img src="thumb/02_engagement_animation.gif" loading="lazy"></a>
+    <figcaption><b>Engagement animation</b><br>Wall + fibers deform together under rising EDP; fibers sweep blue&rarr;red as they cross &lambda;f=1 (tension-only Holzapfel-Ogden).</figcaption></figure>
+  <figure><a href="full/03_holzapfel_ogden_response.png"><img src="thumb/03_holzapfel_ogden_response.png" loading="lazy"></a>
+    <figcaption><b>Holzapfel-Ogden response</b><br>1-D Cauchy stress vs stretch along fiber/sheet; LV vs RV, full vs matrix-only.</figcaption></figure>
+  <figure><a href="full/04_material_vs_kakaletsis_fig_6.png"><img src="thumb/04_material_vs_kakaletsis_fig_6.png" loading="lazy"></a>
+    <figcaption><b>Material vs Kakaletsis Fig 6</b><br>Model response across all 9 shear/tension modes; RV (fit) vs ovine-LV estimate vs human LV, same axes as the paper.</figcaption></figure>
+  <figure><a href="full/05_stress_tet10_speckle_fix.png"><img src="thumb/05_stress_tet10_speckle_fix.png" loading="lazy"></a>
+    <figcaption><b>Stress: tet10 speckle fix</b><br>Left = raw tet10 CellDataToPointData speckle; middle/right = consistent nodal field (linearized / SPR) with surface normals.</figcaption></figure>
+  <figure><a href="full/06_spr_stress_recovery.png"><img src="thumb/06_spr_stress_recovery.png" loading="lazy"></a>
+    <figcaption><b>SPR stress recovery</b><br>Long-axis cut, von Mises: raw per-element vs naive nodal vs seam-aware SPR.</figcaption></figure>
+  <figure><a href="full/07_pericardial_bc.png"><img src="thumb/07_pericardial_bc.png" loading="lazy"></a>
+    <figcaption><b>Pericardial BC</b><br>Distributed spring base support (no clamp): smooth, artifact-free base stress (partial-load frame).</figcaption></figure>
+</div></body></html>
