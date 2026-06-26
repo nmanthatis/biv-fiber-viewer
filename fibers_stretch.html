@@ -1,0 +1,15 @@
+<!doctype html><html><head><meta charset="utf-8">
+<title>BiV fibers — stretch</title>
+<script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+<style>html,body{margin:0;height:100%;background:#fff}model-viewer{width:100vw;height:100vh}
+.cap{position:fixed;top:10px;left:14px;font:14px sans-serif;color:#333}</style></head>
+<style>.bar{position:fixed;right:24px;top:50%;transform:translateY(-50%);
+ width:26px;height:300px;border:1px solid #888;background:linear-gradient(to top,rgb(58,76,192) 0%, rgb(86,115,224) 9%, rgb(116,151,245) 18%, rgb(148,181,254) 27%, rgb(180,205,250) 36%, rgb(208,218,233) 45%, rgb(231,214,204) 55%, rgb(245,193,168) 64%, rgb(245,161,130) 73%, rgb(234,123,96) 82%, rgb(211,77,64) 91%, rgb(179,3,38) 100%)}
+.bw{position:fixed;right:54px;top:50%;transform:translateY(-50%);height:300px;
+ font:12px sans-serif;color:#222;display:flex;flex-direction:column;justify-content:space-between;align-items:flex-end}
+.bt{position:fixed;right:24px;top:calc(50% - 175px);font:bold 12px sans-serif;color:#222}</style></head>
+<body><div class="cap">BiV fibers — stretch &mdash; drag to rotate, scroll to zoom</div>
+<model-viewer src="fibers_stretch.glb" camera-controls auto-rotate
+ exposure="1.0" shadow-intensity="0" environment-image="neutral"></model-viewer>
+<div class="bt">stretch</div><div class="bar"></div>
+<div class="bw"><div>1.15</div><div>1.10</div><div>1.05</div><div>1.00</div><div>0.95</div></div></body></html>

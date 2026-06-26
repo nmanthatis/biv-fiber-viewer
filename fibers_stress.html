@@ -1,0 +1,15 @@
+<!doctype html><html><head><meta charset="utf-8">
+<title>BiV fibers — fiber_stress</title>
+<script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+<style>html,body{margin:0;height:100%;background:#fff}model-viewer{width:100vw;height:100vh}
+.cap{position:fixed;top:10px;left:14px;font:14px sans-serif;color:#333}</style></head>
+<style>.bar{position:fixed;right:24px;top:50%;transform:translateY(-50%);
+ width:26px;height:300px;border:1px solid #888;background:linear-gradient(to top,rgb(0,0,3) 0%, rgb(19,10,52) 9%, rgb(57,9,98) 18%, rgb(95,18,110) 27%, rgb(133,32,106) 36%, rgb(169,46,94) 45%, rgb(203,64,73) 55%, rgb(230,92,46) 64%, rgb(247,131,16) 73%, rgb(251,174,18) 82%, rgb(244,219,75) 91%, rgb(252,254,164) 100%)}
+.bw{position:fixed;right:54px;top:50%;transform:translateY(-50%);height:300px;
+ font:12px sans-serif;color:#222;display:flex;flex-direction:column;justify-content:space-between;align-items:flex-end}
+.bt{position:fixed;right:24px;top:calc(50% - 175px);font:bold 12px sans-serif;color:#222}</style></head>
+<body><div class="cap">BiV fibers — fiber_stress &mdash; drag to rotate, scroll to zoom</div>
+<model-viewer src="fibers_stress.glb" camera-controls auto-rotate
+ exposure="1.0" shadow-intensity="0" environment-image="neutral"></model-viewer>
+<div class="bt">fiber_stress</div><div class="bar"></div>
+<div class="bw"><div>20.00</div><div>15.00</div><div>10.00</div><div>5.00</div><div>0.00</div></div></body></html>
